@@ -1,41 +1,26 @@
-# Chainlist
-
-## Add a chain
-
-Submit a PR that adds a new file to the [constants/additionalChainRegistry folder](https://github.com/DefiLlama/chainlist/tree/main/constants/additionalChainRegistry). The new file should be named `chainid-{chainid_number}.js` and the contents should follow this structure:
-```
 {
-  "name": "Ethereum Mainnet",
-  "chain": "ETH",
+  "name": "TTAJ PoSA Local",
+  "chain": "TTAJ",
   "rpc": [
-    "https://eth.llamarpc.com",
+    "http://localhost:19934"
   ],
   "faucets": [],
   "nativeCurrency": {
-    "name": "Ether",
-    "symbol": "ETH",
+    "name": "TTAJ Token",
+    "symbol": "TTAJ",
     "decimals": 18
   },
-  "features": [{ "name": "EIP155" }, { "name": "EIP1559" }],
-  "infoURL": "https://ethereum.org",
-  "shortName": "eth",
-  "chainId": 1,
-  "networkId": 1,
+  "features": [{ "name": "EIP155" }],
+  "infoURL": "http://localhost:19934",
+  "shortName": "ttaj",
+  "chainId": 9934,
+  "networkId": 9934,
   "icon": "ethereum",
-  "explorers": [{
-    "name": "etherscan",
-    "url": "https://etherscan.io",
-    "icon": "etherscan",
-    "standard": "EIP3091"
-  }]
+  "explorers": [
+    {
+      "name": "local-explorer",
+      "url": "http://localhost:19934/explorer",
+      "standard": "EIP3091"
+    }
+  ]
 }
-```
-
-## Add an RPC to a chain that is already listed
-
-If you wish to add your RPC, please submit a PR modifying [constants/extraRpcs.js](https://github.com/DefiLlama/chainlist/blob/main/constants/extraRpcs.js) to add your RPC to the given chains.
-
-## API
-The following API returns all the data in our website, including chain data along with all of their RPCs:
-
-https://chainlist.org/rpcs.json
