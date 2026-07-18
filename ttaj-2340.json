@@ -1,0 +1,30 @@
+{
+  "name": "TTAJ Super Chain",
+  "chain": "TTAJ",
+  "rpc": [
+    "https://rpc.ttajm.com"
+  ],
+  "faucets": [],
+  "nativeCurrency": {
+    "name": "TTAJ",
+    "symbol": "TTAJ",
+    "decimals": 18
+  },
+  "features": [
+    { "name": "EIP155" },
+    { "name": "EIP1559" }
+  ],
+  "infoURL": "https://info.ttajm.com",
+  "shortName": "ttaj",
+  "chainId": 2340,
+  "networkId": 2340,
+  "icon": "ethereum",
+  "explorers": [
+    {
+      "name": "ttajscan",
+      "url": "https://ttajscan.com",
+      "icon": "ttaj",
+      "standard": "EIP3091"
+    }
+  ]
+}
